@@ -12,6 +12,7 @@ import gradientStar from "../assets/icons/star-gradient.png"
 import bigIdea from "../assets/images/big-idea.png"
 import curvedArrow from "../assets/images/curved-arrow.png"
 import girlWithLinkedAi from "../assets/images/girl-with-linked-ai.png"
+import peopleWithPieChart from "../assets/images/people-pie.png"
 
 const Home = () => {
   return (
@@ -85,6 +86,31 @@ const Home = () => {
             </div>
             <div className="relative flex flex-col justify-center items-center w-full md:w-[50%] pt-10 pb-5">
               <img className="w-[90%]" src={girlWithLinkedAi} alt="The Big Idea" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="relative py-5 mb-5">
+        <div className="container mx-auto px-16">
+          <div className="flex flex-col md:flex-row gap-10">
+            <div className="relative flex flex-col justify-center items-center w-full md:w-[50%] pt-10 pb-5">
+              <img className="w-[90%]" src={peopleWithPieChart} alt="People happy with getLinkedAi result" />
+              <img className="absolute top-[10%] left-[23%] h-5 w-5" src={purpleStar} alt="" />
+            </div>
+            <div className="relative flex flex-col justify-start w-full md:w-[50%] pt-10 pb-5 text-left">
+              <div className="text-4xl font-semibold font-clashDisplay ">Judging Criteria</div>
+              <div className="text-primaryPink text-4xl  font-semibold font-clashDisplay leading-[2]">Key Attributes</div>
+              <div className="flex flex-col text-sm leading-7 space-y-3 mb-5">
+                <p><span className="text-primaryPink font-medium">Innovation and Creativity: </span>  Evaluate the uniqueness and creativity of the
+                  solution. Consider whether it addresses a real-world problem in a novel way or introduces innovative features.</p>
+                <p><span className="text-primaryPink font-medium">Functionality: </span> Assess how well the solution works. Does it perform its 
+                  intended functions effectively and without major issues? Judges would consider the completeness and robustness of the solution.</p>
+                <p><span className="text-primaryPink font-medium">Impact and Relevance: </span> Determine the potential impact of the solution 
+                  in the real world. Does it address a significant problem, and is it relevant to the target audience? Judges would assess the potential social, economic, or environmental benefits.</p>
+                <p><span className="text-primaryPink font-medium">Technical Complexity: </span> Evaluate the technical sophistication of the solution.  Judges would consider the complexity of the code, the use of advanced technologies or algorithms, and the scalability of the solution.</p>
+                <p><span className="text-primaryPink font-medium">Adherence to Hackathon Rules: </span> Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements.</p>
+              </div>
+              <button className='px-5 py-2 bg-btnBgGrad rounded-[4px] max-w-[150px] hover:scale-95 hover:opacity-90'>Read More</button>
             </div>
           </div>
         </div>
