@@ -13,11 +13,12 @@ import bigIdea from "../assets/images/big-idea.png"
 import curvedArrow from "../assets/images/curved-arrow.png"
 import girlWithLinkedAi from "../assets/images/girl-with-linked-ai.png"
 import peopleWithPieChart from "../assets/images/people-pie.png"
+import manThinking from "../assets/images/man-thinking.png"
 
 const Home = () => {
   return (
     <Layout>
-      <section className="relative pt-5 mb-5 min-h-[calc(100vh -90px)]" style={{minHeight: 'calc(100vh - 100px)'}}>
+      <section className="relative pt-5 mb-5 min-h-[calc(100vh -90px)]" style={{maxHeight: 'calc(100vh - 100px)'}}>
         <div className="container mx-auto px-16">
           <div className="flex flex-col">
             <p className="relative text-lg  text-end font-semibold italic after:bg-heroLineCurve after:absolute after:top-[60%] after:right-0 after:h-[30px] after:w-[400px] after:bg-no-repeat after:bg-right after:bg-30% after:animate-[fadeInRight_0.5s_0.2s_ease_forwards]">Igniting a Revolution in HR Innovation</p>
@@ -92,6 +93,8 @@ const Home = () => {
       </section>
       <section className="relative py-5 mb-5">
         <div className="container mx-auto px-16">
+              <img className="absolute bottom-[-5%] left-[-20%] rotate-[270deg]" src={purpleFlareImg} alt="" />
+              <img className="absolute bottom-[-29%] right-[-23%] w-[60%] rotate-[90deg]" src={purpleFlareImg} alt="" />
           <div className="flex flex-col md:flex-row gap-10">
             <div className="relative flex flex-col justify-center items-center w-full md:w-[50%] pt-10 pb-5">
               <img className="w-[90%]" src={peopleWithPieChart} alt="People happy with getLinkedAi result" />
@@ -111,6 +114,63 @@ const Home = () => {
                 <p><span className="text-primaryPink font-medium">Adherence to Hackathon Rules: </span> Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements.</p>
               </div>
               <button className='px-5 py-2 bg-btnBgGrad rounded-[4px] max-w-[150px] hover:scale-95 hover:opacity-90'>Read More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="relative py-5 mb-5">
+        <div className="container mx-auto px-16">
+          <img className="absolute  top-[0] left-[5%] w-5 h-5" src={purpleStar} alt="" />
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="relative flex flex-col justify-center w-full md:w-[50%] pt-10 pb-5 text-left">
+              <div className="text-4xl font-semibold font-clashDisplay ">Frequently Asked</div>
+              <div className="text-primaryPink text-4xl  font-semibold font-clashDisplay leading-[2]">Questions</div>
+              <p className="text-sm max-w-[65%] mb-5">We got answers to the questions that you might want to ask about <span className="font-semibold">getlinked Hackathon 1.0</span></p>
+              <div className="flex items-center justify-center">
+
+                <div className="w-full max-w-screen-sm">
+                  <button className="w-full border-b-2 border-primaryPink pb-4 text-left group focus:outline-none">
+                    <div className="flex justify-between text-md font-medium">Can I work on a project I started before the hackathon?  <span className="text-primaryPink text-xl pl-6">+</span></div>
+                    <div className="mt-3 hidden text-[#808080] text-sm group-focus:flex">
+                      <p>Yes, you can. We are currently on our pre-hackathon where we had over 5000+ registrations.</p>
+                    </div>
+                  </button>
+                  <button className="w-full border-b-2 border-primaryPink pb-4 text-left group mt-6 focus:outline-none">
+                    <div className="flex justify-between text-md font-medium">What happens if I need help during the hackathon? <span className="text-primaryPink text-xl pl-6">+</span></div>
+                    <div className="mt-3 hidden text-[#808080] text-sm group-focus:flex">
+                      <p>We have a vibrant community of 2k+ on telegram and 4k+ on twitter where you can get any questions answered. So do well to check our page.</p>
+                    </div>
+                  </button>
+                  <button className="w-full border-b-2 border-primaryPink pb-4 text-left group mt-6 focus:outline-none">
+                    <div className="flex justify-between text-md font-medium">What happens if I don't have an idea for a project? <span className="text-primaryPink text-xl pl-6">+</span></div>
+                    <div className="mt-3 hidden text-[#808080] text-sm group-focus:flex">
+                      <p>We have an idea bank of projects to be worked on. So don't worry we got you covered</p>
+                    </div>
+                  </button>
+                  <button className="w-full border-b-2 border-primaryPink pb-4 text-left group mt-6 focus:outline-none">
+                    <div className="flex justify-between text-md font-medium">Can I join a team or do I have to come with one? <span className="text-primaryPink text-xl pl-6">+</span></div>
+                    <div className="mt-3 hidden text-[#808080] text-sm group-focus:flex">
+                      <p>You come with one. You can also meet new friends on our active telegram community to create one. </p>
+                    </div>
+                  </button>
+                  <button className="w-full border-b-2 border-primaryPink pb-4 text-left group mt-6 focus:outline-none">
+                    <div className="flex justify-between text-md font-medium">What happens after the hackathon ends? <span className="text-primaryPink text-xl pl-6">+</span></div>
+                    <div className="mt-3 hidden text-[#808080] text-sm group-focus:flex">
+                      <p>The pre hackathon winner would be announced on Tuesday, 26<sup>th</sup> September 2023.</p>
+                    </div>
+                  </button>
+                  <button className="w-full border-b-2 border-primaryPink pb-4 text-left group mt-6 focus:outline-none">
+                    <div className="flex justify-between text-md font-medium">Can I work on a project I started before the hackathon? <span className="text-primaryPink text-xl pl-6">+</span></div>
+                    <div className="mt-3 hidden text-[#808080] text-sm group-focus:flex">
+                      <p>Yes, you can. We try not to limit what your creativity can achieve.</p>
+                    </div>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+            <div className="relative flex flex-col justify-center items-center w-full md:w-[50%] pt-10 pb-5">
+              <img className="w-[90%]" src={manThinking} alt="The Big Idea" />
             </div>
           </div>
         </div>
