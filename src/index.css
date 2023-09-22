@@ -1,45 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unica+One&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Clash Display';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("./assets/fonts/ClashDisplay-Variable.woff2") format('woff2');
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/ClashDisplay-Variable.woff2") format('woff2');
 }
 
 @font-face {
-    font-family: 'Clash Display';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url("./assets/fonts/ClashDisplay-Semibold.woff2") format('woff2');
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/ClashDisplay-Semibold.woff2") format('woff2');
 }
 
 @font-face {
-    font-family: 'Clash Display';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("./assets/fonts/ClashDisplay-Variable.woff") format('woff');
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/ClashDisplay-Variable.woff") format('woff');
 }
 
 @font-face {
-    font-family: 'Clash Display';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("./assets/fonts/ClashDisplay-Variable.ttf") format('tff');
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/ClashDisplay-Variable.ttf") format('tff');
 }
 
 :root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  /* font-family: 'Unica One', cursive; */
   font-family: 'Clash Display', sans-serif;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
+  color: white;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -48,25 +49,26 @@
   -webkit-text-size-adjust: 100%;
 }
 
-html{
+html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-*{
-  transition: 0.3s ease-in-out;
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -ms-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
+* {
+  transition: 0.25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
 }
 
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #FBF6F2;
+  background-color: #150E28;
+  color: white;
   overflow-x: hidden;
-  overflow-y:scroll;
+  overflow-y: auto;
 }
