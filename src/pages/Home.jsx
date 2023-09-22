@@ -11,6 +11,7 @@ import purpleStar from "../assets/icons/star-purple.png"
 import gradientStar from "../assets/icons/star-gradient.png"
 import bigIdea from "../assets/images/big-idea.png"
 import curvedArrow from "../assets/images/curved-arrow.png"
+import girlWithLinkedAi from "../assets/images/girl-with-linked-ai.png"
 
 const Home = () => {
   return (
@@ -56,12 +57,34 @@ const Home = () => {
               <div className="text-4xl font-semibold font-clashDisplay ">Introduction to getlinked</div>
               <div className="text-primaryPink text-4xl  font-semibold font-clashDisplay leading-[2]">tech Hackathon 1.0</div>
               <p className="text-sm leading-7">Our tech hackathon is a melting pot of visionaries, and its purpose is as
-                  clear as day: to shape the future. Whether you're a coding genius, a 
-                  design maverick, or a concept wizard, you'll have the chance to transform 
+                  clear as day: to shape the future. Whether you&apos;re a coding genius, a 
+                  design maverick, or a concept wizard, you&apos;ll have the chance to transform 
                   your ideas into reality. Solving real-world problems, pushing the boundaries
                   of technology, and creating solutions that can change the world,
-                  that's what we're all about!</p>
+                  that&apos;s what we&apos;re all about!</p>
                   <img className="absolute  top-[25%] right-0 w-5 h-5" src={purpleStar} alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="relative py-5 mb-5">
+        <div className="container mx-auto px-16">
+          <img className="absolute  top-[25%] left-[25%] w-5 h-5" src={grayStar} alt="" />
+          <img className="absolute bottom-[-50%] right-[-35%] w-[80%] -z-20 opacity-70 rotate-[117deg]" src={purpleFlareImg} alt="" />
+          <img className="absolute top-[-15px] left-[4%] opacity-80 w-[50%] h-[80%] -z-20" src={purpleFlareImg} alt="" />
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="relative flex flex-col justify-center w-full md:w-[50%] pt-10 pb-5 text-left">
+              <div className="text-4xl font-semibold font-clashDisplay ">Rules and</div>
+              <div className="text-primaryPink text-4xl  font-semibold font-clashDisplay leading-[2]">Guidelines</div>
+              <p className="text-sm leading-7">Our tech hackathon is a melting pot of visionaries, and its purpose is as
+                  clear as day: to shape the future. Whether you&apos;re a coding genius, a 
+                  design maverick, or a concept wizard, you&apos;ll have the chance to transform 
+                  your ideas into reality. Solving real-world problems, pushing the boundaries
+                  of technology, and creating solutions that can change the world,
+                  that&apos;s what we&apos;re all about!</p>
+            </div>
+            <div className="relative flex flex-col justify-center items-center w-full md:w-[50%] pt-10 pb-5">
+              <img className="w-[90%]" src={girlWithLinkedAi} alt="The Big Idea" />
             </div>
           </div>
         </div>
