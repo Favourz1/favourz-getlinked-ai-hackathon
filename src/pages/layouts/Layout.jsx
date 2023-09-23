@@ -1,4 +1,3 @@
-import React from 'react'
 import {Link } from "react-router-dom"
 import logo from "../../assets/icons/getlinked-logo.svg"
 import callIcon from "../../assets/icons/call.svg"
