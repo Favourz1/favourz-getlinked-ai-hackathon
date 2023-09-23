@@ -72,3 +72,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+.group.inverted-tree{
+  flex-direction: row-reverse;
+}

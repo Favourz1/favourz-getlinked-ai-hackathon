@@ -22,6 +22,9 @@ export default {
        backgroundSize: {
          '30%': '30%',
        },
+       boxShadow: {
+        'treeCounter': '0 0 0 8px #150E28',
+      },
         animation: {
         'fadeInLeft': 'fadeInLeft 0.6s 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both',
         'fadeInRight': 'fadeInRight 0.6s 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both',

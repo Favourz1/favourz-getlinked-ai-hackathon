@@ -14,6 +14,11 @@ import curvedArrow from "../assets/images/curved-arrow.png"
 import girlWithLinkedAi from "../assets/images/girl-with-linked-ai.png"
 import peopleWithPieChart from "../assets/images/people-pie.png"
 import manThinking from "../assets/images/man-thinking.png"
+import champCup from "../assets/images/cup-target.png"
+import goldMedal from "../assets/images/gold-medal.png"
+import bronzeMedal from "../assets/images/bronze-medal.png"
+import silverMedal from "../assets/images/silver-medal.png"
+import { timelineData } from "../data/timelineData"
 
 const Home = () => {
   return (
@@ -49,7 +54,7 @@ const Home = () => {
       </section>
       <section className="relative py-5 mb-5">
         <div className="container mx-auto px-16">
-          <div className="flex flex-col md:flex-row items-center gap-10">
+          <div className="flex flex-col md:flex-row items-center gapx-10">
             <div className="relative flex flex-col justify-center items-center w-full md:w-[50%] pt-10 pb-5">
               <img className="w-[80%]" src={bigIdea} alt="The Big Idea" />
               <img className="absolute  bottom-[-8px] right-[12%] h-11 w-12" src={curvedArrow} alt="" />
@@ -175,8 +180,100 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="relative py-5 mb-5">
+        <div className="container mx-auto px-16">
+          <div className="flex flex-col justify-center items-center gap-10">
+            <div className="text-center max-w-[30%]">
+              <div className="text-4xl font-semibold font-clashDisplay ">Timeline</div>
+              <p className="text-sm flex items-center">Here is the breakdown of the time we anticipate using for the upcoming event.</p>
+            </div>
+            <div className="max-w-[80%] flex flex-col items-center">
+              {
+                timelineData.map((timeline, index)=>(
+                  <div className={`group ${timeline.isInverted ? 'inverted-tree': ''} relative min-h-[200px] flex items-center justify-center px-10`} key={index}>
+                <div className={`group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['1'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter`} style={{content: timeline.id}}>
+                  <div className="text-primaryPink text-lg font-semibold"> {timeline.header}</div>
+                  <p className="text-sm flex items-center">{timeline.subText}</p>
+                </div>
+                <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%]">{timeline.date}</div>
+              </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="relative py-5 mb-5">
+        <div className="container mx-auto px-16">
+                    <img className="absolute bottom-[-50%] right-[-35%] w-[80%] -z-20 opacity-70 rotate-[117deg]" src={purpleFlareImg} alt="" />
+          <img className="absolute top-[-15px] left-[4%] opacity-80 w-[50%] h-[80%] -z-20" src={purpleFlareImg} alt="" />
+
+          <div className="flex flex-col md:flex-row gap-10">
+            <div className="relative flex flex-col justify-center items-center w-full md:w-[40%] pt-10 pb-5">
+              <img className="w-[90%]" src={champCup} alt="Champions Cup" />
+              <img className="absolute top-[10%] left-[23%] h-5 w-5" src={purpleStar} alt="" />
+            </div>
+            <div className="relative flex flex-col justify-start w-full md:w-[60%] pt-10 pb-5 text-left">
+              <div className="pl-[20%] mb-10">
+                <div className="text-4xl font-semibold font-clashDisplay ">Prizes and</div>
+                <div className="text-primaryPink text-4xl  font-semibold font-clashDisplay leading-[2]">Rewards</div>
+                <p className="text-sm leading-7 max-w-[60%]">Highlight of the prizes or rewards for winners and for participants</p>
+              </div>
+              <div className="relative flex justify-center items-center mt-36 space-x-6">
+              <img className="absolute top-[-80%] left-[50px] h-5 w-5" src={whiteStar} alt="" />
+              <img className="absolute top-[-40%] right-[8px] h-5 w-5" src={whiteStar} alt="" />
+              <img className="absolute bottom-[-10%] right-[30%] h-5 w-5" src={grayStar} alt="" />
+                <div className="flex flex-col min-w-[200px] min-h-[250px] justify-end items-center text-center relative p-4 rounded-[8px] hover:shadow-xl border border-primaryPink bg-[#d434fe1f]">
+                  <img className="absolute bottom-[80%] left-[6px] scale-[1.2]" src={silverMedal} alt="Gold Medal" />
+                    <div className="mb-3"><span className="text-2xl font-bold">2nd</span><br/><span  className="text-md font-semibold">Runner</span></div>
+                    <p className="text-xl text-primaryPink font-semibold">N300,000</p>
+                </div>
+                <div className="flex flex-col min-w-[200px] min-h-[280px] justify-end items-center text-center relative p-4 rounded-[8px] hover:shadow-xl border border-[#903AFF] bg-[#903aff1f]">
+                  <img className="absolute bottom-[80%] left-[2px] scale-[1.35]" src={goldMedal} alt="Gold Medal" />
+                    <div className="mb-3"><span className="text-2xl font-bold">1st</span><br/><span  className="text-md font-semibold">Runner</span></div>
+                    <p className="text-xl text-[#903AFF] font-semibold">N400,000</p>
+                </div>
+                <div className="flex flex-col min-w-[200px] min-h-[220px] justify-end items-center text-center relative p-4 rounded-[8px] hover:shadow-xl border border-primaryPink bg-[#d434fe1f]">
+                  <img className="absolute bottom-[80%] left-[10px]" src={bronzeMedal} alt="Gold Medal" />
+                    <div className="mb-3"><span className="text-2xl font-bold">3rd</span><br/><span  className="text-md font-semibold">Runner</span></div>
+                    <p className="text-xl text-primaryPink font-semibold">N150,000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 </Layout>
   )
 }
 
 export default Home
+
+              // <div className="group relative min-h-[200px] flex items-center justify-center px-10">
+              //   <div className="relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['1'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
+              //     <div className="text-primaryPink text-lg font-semibold"> Hackathon Announcement </div>
+              //     <p className="text-sm flex items-center">The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register</p>
+              //   </div>
+              //   <div className="text-primaryPink text-lg font-semibold w-[50%] p-8">November 18, 2023</div>
+              // </div>
+              // <div className="group inverted-tree relative min-h-[200px] flex items-center justify-center px-10">
+              //   <div className="group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['1'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
+              //     <div className="text-primaryPink text-lg font-semibold"> Teams Registration begins</div>
+              //     <p className="text-sm flex items-center">Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023 by proceeding to register</p>
+              //   </div>
+              //   <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%]">November 18, 2023</div>
+              // </div>
+              // <div className="group relative min-h-[200px] flex items-center justify-center px-10">
+              //   <div className="relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['1'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
+              //     <div className="text-primaryPink text-lg font-semibold"> Hackathon Announcement </div>
+              //     <p className="text-sm flex items-center">The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register</p>
+              //   </div>
+              //   <div className="text-primaryPink text-lg font-semibold w-[50%] p-8">November 18, 2023</div>
+              // </div>
+              // <div className="group relative min-h-[200px] flex items-center justify-center px-10">
+              //   <div className="relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['1'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
+              //     <div className="text-primaryPink text-lg font-semibold"> Hackathon Announcement </div>
+              //     <p className="text-sm flex items-center">The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register</p>
+              //   </div>
+              //   <div className="text-primaryPink text-lg font-semibold w-[50%] p-8">November 18, 2023</div>
+              // </div>
