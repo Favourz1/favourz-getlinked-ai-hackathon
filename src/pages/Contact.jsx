@@ -16,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const schema = yup.object().shape({
   first_name: yup.string().trim().required("First Name is required"),
   email: yup.string().email().trim().required(),
-  phone_number: yup.string().min(10, 'Phone number must be exactly 10 digits'),
+  phone_number: yup.string().min(10, 'Phone number must be at least 10 digits'),
   message: yup.string().trim().required(),
 })
 
