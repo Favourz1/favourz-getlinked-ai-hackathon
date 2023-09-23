@@ -26,6 +26,7 @@ import payboxLogo from "../assets/images/Paybox.png"
 import visualplusLogo from "../assets/images/vizual-plus.png"
 import privacyImg from "../assets/images/privacy.png"
 import { timelineData } from "../data/timelineData"
+import HeroTimer from "../components/HeroTimer"
 
 const Home = () => {
   return (
@@ -46,7 +47,7 @@ const Home = () => {
                     <img className="absolute top-[-130px] left-[10%] h-5 w-5 z-20" src={whiteStar} alt="" />
                 </div>
                 <button className='px-5 py-2 mb-16 max-w-[120px] bg-btnBgGrad rounded-[4px] hover:scale-[0.98] hover:opacity-80'>Register</button>
-                <p className="font-unica text-5xl">00<sub className="text-sm">H</sub>   00<sub className="text-sm">M</sub>   00<sub className="text-sm">S</sub></p>
+                <HeroTimer/>
               </div>
               <div className="relative flex justify-center items-center w-[60%] pt-6">
                 <img className=" grayscale -z-20" src={manWithGlass} alt="Man Exploring getLinked AI" style={{maxHeight: 'calc(100vh - (100px + 55px))'}}/>
@@ -61,7 +62,7 @@ const Home = () => {
       </section>
       <section className="relative py-5 mb-5">
         <div className="container mx-auto px-16">
-          <div className="flex flex-col md:flex-row items-center gapx-10">
+          <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="relative flex flex-col justify-center items-center w-full md:w-[50%] pt-10 pb-5">
               <img className="w-[80%]" src={bigIdea} alt="The Big Idea" />
               <img className="absolute  bottom-[-8px] right-[12%] h-11 w-12" src={curvedArrow} alt="" />

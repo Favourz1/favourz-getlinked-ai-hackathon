@@ -25,6 +25,8 @@ export default {
        },
        boxShadow: {
         'treeCounter': '0 0 0 8px #150E28',
+        'contactForm': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+        'input': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
       },
         animation: {
         'fadeInLeft': 'fadeInLeft 0.6s 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both',
