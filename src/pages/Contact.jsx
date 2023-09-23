@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Layout from "./layouts/Layout"
 import instagram from "../assets/icons/instagram.svg"
 import twitter from "../assets/icons/twitter.svg"
 import facebook from "../assets/icons/facebook.svg"
@@ -12,6 +11,8 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
  import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import backIcon from "../assets/icons/back-circle.png"
+import { Link } from "react-router-dom"
 
 const schema = yup.object().shape({
   first_name: yup.string().trim().required("First Name is required"),
@@ -50,22 +51,22 @@ async function submitContactForm(data){
       setIsLoading(false)
 }
   return (
-    <Layout showFooter={false}>
+        <>
         <section className="relative py-5 overflow-hidden">
-        <div className="container mx-auto px-16">
-          <img className="absolute bottom-[-50%] right-[-35%] w-[80%] -z-20 opacity-70 rotate-[117deg]" src={purpleFlareImg} alt="" />
-          <img className="absolute top-[-15px] left-[4%] opacity-80 w-[50%] h-[80%] -z-20" src={purpleFlareImg} alt="" />
+        <div className="container mx-auto px-6 md:px-16">
+          <img className="hidden md:flex absolute bottom-[-50%] right-[-35%] w-[80%] -z-20 opacity-70 rotate-[117deg]" src={purpleFlareImg} alt="" />
+          <img className="absolute top-[-15px] left-[-20%] md:left-[4%] opacity-80 w-auto md:w-[50%] h-[40%] md:h-[80%] -z-20" src={purpleFlareImg} alt="" />
           <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="relative flex flex-col justify-center w-full md:w-[30%] font-medium pt-10 pb-5 space-y-4">
+            <div className="relative hidden md:flex flex-col justify-center w-full md:w-[30%] font-medium pt-10 pb-5 space-y-4">
               <h1 className="text-3xl text-primaryPink font-semibold font-clashDisplay animate-fadeInLeft">Get in touch</h1>
-              <div className="animate-fadeInLeft" style={{animationDelay: "0.5s"}}>
+              <div className="animate-fadeInLeft" style={{animationDelay: "0.4s"}}>
                 Contact <br/> Information
               </div>
-              <div>
+              <div className="animate-fadeInLeft" style={{animationDelay: "0.5s"}}>
                 27,Alara Street<br/> Yaba 100012 <br/>Lagos State
               </div>
-              <p>Call Us : 07067981819</p>
-              <div>
+              <p className="animate-fadeInLeft" style={{animationDelay: "0.6s"}}>Call Us : 07067981819</p>
+              <div className="animate-fadeInLeft" style={{animationDelay: "0.7s"}}>
                 We are open from Monday-Friday 08:00am - 05:00pm
               </div>
               <div>
@@ -73,21 +74,27 @@ async function submitContactForm(data){
                   Share On
                 </div>
                 <div className="flex items-center space-x-4">
-                  <img src={instagram} alt="" />
-                    <img src={twitter} alt="" />
-                    <img src={facebook} alt="" />
-                    <img src={linkedin} alt="" />
+                  <img className="animate-fadeInLeft hover:scale-125" style={{animationDelay: "0.8s"}} src={instagram} alt="" />
+                    <img className="animate-fadeInLeft hover:scale-125" style={{animationDelay: "0.9s"}} src={twitter} alt="" />
+                    <img className="animate-fadeInLeft hover:scale-125" style={{animationDelay: "1s"}} src={facebook} alt="" />
+                    <img className="animate-fadeInLeft hover:scale-125" style={{animationDelay: "1.1s"}} src={linkedin} alt="" />
                 </div>
               </div>
               <img className="h-4 w-4 absolute top-[-100px] left-[70%]" src={gradientStar} alt="" />
             </div>
             <div className="relative flex flex-col justify-center w-full md:w-[70%] pt-10 pb-5 text-left">
-              <div className="p-10 rounded-[12px] bg-[#ffffff08] shadow-contactForm">
+              <Link to="/">
+                <img className="h-8 w-8" src={backIcon} alt="" />
+              </Link>
+              <div className="p-10 rounded-[12px] bg-transparent md:bg-[#ffffff08] shadow-none md:shadow-contactForm animate-fadeInUp">
                 <div className="text-xl text-primaryPink font-bold font-clashDisplay leading-[2] ">
                   Questions or need assistance?
                 </div>
                 <div className="text-xl text-primaryPink font-bold font-clashDisplay mb-5">
                   Let us know  about it!
+                </div>
+                <div className="text-md max-w-[90%] mb-4">
+                  Email us below to any questions related to our event
                 </div>
                 <form className="space-y-4 flex flex-col" onSubmit={handleSubmit(submitContactForm)}>
                   <div>
@@ -127,7 +134,7 @@ async function submitContactForm(data){
         pauseOnHover
         theme="dark"
         />
-    </Layout>
+        </>
   )
 }
 

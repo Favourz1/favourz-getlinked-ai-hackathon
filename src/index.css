@@ -53,6 +53,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 * {
@@ -82,4 +83,90 @@ body {
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 800px){
+  :root{
+    font-size: 14px;
+  }
+}
+
+
+.mobile-nav.mobile-nav__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 20;
+  transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav__trigger {
+  position: absolute;
+  top: 14px;
+  right: 26px;
+  transition-delay: 300ms;
+  transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav__list-wrapper {
+  margin-bottom: 90px;
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 2em;
+  transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 0.518s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav__list-item {
+  animation: moveUp 0.5s cubic-bezier(0.48, 0.43, 0.56, 0.82) both;
+  -webkit-animation: moveUp 0.5s cubic-bezier(0.48, 0.43, 0.56, 0.82) both;
+  animation-delay: 0.2s;
+}
+
+.mobile-nav__list-item:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+
+.mobile-nav__list-item:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+.mobile-nav__list-item:nth-of-type(4) {
+  animation-delay: 0.5s;
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+    -webkit-transform: translateY(8px);
+    -moz-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    -o-transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
 }

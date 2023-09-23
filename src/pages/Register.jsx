@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import manWithDesk from "../assets/images/man-with-desk.png"
 import purpleFlareImg from "../assets/images/purple-flare.png"
-import Layout from "./layouts/Layout"
 import peopleWalking from "../assets/images/people-walking.png"
 import axios from "axios"
 import {useForm } from 'react-hook-form'
@@ -9,6 +8,9 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
  import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom"
+import backIcon from "../assets/icons/back-circle.png"
+
 
 const schema = yup.object().shape({
   email: yup.string().email().trim().required(),
@@ -65,20 +67,24 @@ const Register = () => {
   }
 
     return (
-      <Layout showFooter={false}>
+      <>
         <section className="relative py-5 overflow-hidden">
-        <div className="container mx-auto px-16">
+        <div className="container mx-auto px-6 md:px-16">
           <img className="absolute bottom-[-50%] right-[-35%] w-[80%] -z-20 opacity-70 rotate-[117deg]" src={purpleFlareImg} alt="" />
-          <img className="absolute top-[-15px] left-[4%] opacity-80 w-[50%] h-[80%] -z-20" src={purpleFlareImg} alt="" />
+          <img className="absolute top-[-15px] left-[-24%] md:left-[4%] opacity-80 w-auto md:w-[50%] h-[50%] h-[80%] -z-20" src={purpleFlareImg} alt="" />
           <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="relative flex flex-col justify-center w-full md:w-[40%] font-medium pt-10 pb-5 space-y-4">
-              <img src={manWithDesk} alt="" className="animate-fadeInLeft"/>
+            <div className="relative hidden md:flex flex-col justify-center items-center md:items-start w-full md:w-[40%] font-medium pt-10 pb-5 space-y-4">
+              <img src={manWithDesk} alt="" className="animate-fadeInLeft w-[8.8rem] md:w-auto h-[10.6rem] md:h-auto"/>
             </div>
             <div className="relative flex flex-col justify-center w-full md:w-[60%] pt-10 pb-5 text-left">
-              <div className="p-8 rounded-[12px] bg-[#ffffff08] shadow-contactForm">
+              <Link to="/">
+                <img className="h-8 w-8" src={backIcon} alt="" />
+              </Link>
+              <div className="p-8 rounded-[12px] bg-transparent md:bg-[#ffffff08] shadow-none md:shadow-contactForm animate-fadeInUp">
                 <div className="text-3xl text-primaryPink font-bold font-clashDisplay leading-[2] ">
                   Register
                 </div>
+                <img src={manWithDesk} alt="" className="flex md:hidden animate-fadeInLeft w-[8.8rem] md:w-auto h-[10.6rem] md:h-auto"/>
                 <div className="text-md flex items-baseline font-medium mb-5">
                   Be part of this movement! <img src={peopleWalking} alt="" />
                 </div>
@@ -86,31 +92,31 @@ const Register = () => {
                   Create your account
                 </div>
                 <form className="space-y-4 flex flex-col" onSubmit={handleSubmit(handleRegisterForm)}>
-                 <div className="flex justify-center items-center w-full space-x-4 mb-4">
-                   <div className="w-1/2 flex flex-col">
+                 <div className="flex flex-col md:flex-row justify-center items-center w-full space-y-4 md:space-x-4 mb-4">
+                   <div className="w-full md:w-1/2  flex flex-col">
                     <label className="text-sm font-medium mb-3">Team Name</label>
                      <input className="w-full  outline-none bg-[#ffffff08] rounded border border-gray-700 focus:border-white shadow-input px-6 py-3" type="text" name="" placeholder="Enter the name of your group" {...register('team_name')} />
                      {errors.team_name &&  <span className="text-red-500 text-sm">{errors.team_name.message}</span>}
                    </div>
-                   <div className="w-1/2 flex flex-col">
+                   <div className="w-full md:w-1/2  flex flex-col">
                     <label className="text-sm font-medium mb-3">Phone</label>
                      <input className="w-full  outline-none bg-[#ffffff08] rounded border border-gray-700 focus:border-white shadow-input px-6 py-3" type="text" name="" placeholder="Enter your phone number" {...register('phone_number')}/>
                       {errors.phone_number && <span className="text-red-500 text-sm">{errors.phone_number.message}</span>}
                    </div>
                  </div>
-                 <div className="flex justify-center items-center w-full space-x-4 mb-4">
-                   <div className="w-1/2 flex flex-col">
+                 <div className="flex flex-col md:flex-row justify-center items-center w-full space-y-4 md:space-x-4 mb-4">
+                   <div className="w-full md:w-1/2 flex flex-col">
                     <label className="text-sm font-medium mb-3">Email</label>
                      <input className="w-full  outline-none bg-[#ffffff08] rounded border border-gray-700 focus:border-white shadow-input px-6 py-3" type="email" name="" placeholder="Enter your email address" {...register('email')}/>
                       {errors.email && <span className="text-red-500 text-sm">{errors.email.message}</span>}
                    </div>
-                   <div className="w-1/2 flex flex-col">
+                   <div className="w-full md:w-1/2 flex flex-col">
                     <label className="text-sm font-medium mb-3">Project Topic</label>
                      <input className="w-full  outline-none bg-[#ffffff08] rounded border border-gray-700 focus:border-white shadow-input px-6 py-3" type="text" name="" placeholder="What is your group project topic" {...register('project_topic')}/>
                      {errors.project_topic && <span className="text-red-500 text-sm">{errors.project_topic.message}</span>}
                    </div>
                  </div>
-                 <div className="flex justify-center items-center w-full space-x-4 mb-4">
+                 <div className="flex  justify-center items-center w-full space-x-4 mb-4">
                    <div className="w-1/2 flex flex-col">
                     <label className="text-sm font-medium mb-3">Category</label>
                     <select className="w-full  outline-none bg-[#ffffff08] rounded border border-gray-700 focus:border-white shadow-input px-6 py-3" {...register('category')}>
@@ -158,7 +164,7 @@ const Register = () => {
         pauseOnHover
         theme="dark"
         />
-    </Layout>
+    </>
   )
 }
 
