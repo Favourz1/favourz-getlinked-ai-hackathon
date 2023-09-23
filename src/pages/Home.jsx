@@ -25,7 +25,6 @@ import wisperLogo from "../assets/images/wisper-logo.png"
 import payboxLogo from "../assets/images/Paybox.png"
 import visualplusLogo from "../assets/images/vizual-plus.png"
 import privacyImg from "../assets/images/privacy.png"
-import { timelineData } from "../data/timelineData"
 import HeroTimer from "../components/HeroTimer"
 
 const Home = () => {
