@@ -195,17 +195,48 @@ const Home = () => {
               <p className="text-sm flex items-center">Here is the breakdown of the time we anticipate using for the upcoming event.</p>
             </div>
             <div className="max-w-[80%] flex flex-col items-center">
-              {
-                timelineData.map((timeline, index)=>(
-                  <div className={`group ${timeline.isInverted ? 'inverted-tree': ''} relative min-h-[200px] flex items-center justify-center px-10`} key={index}>
-                    <div className={`group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['${timeline.id}'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter`}>
-                      <div className="text-primaryPink text-lg font-semibold"> {timeline.header}</div>
-                      <p className="text-sm flex items-center">{timeline.subText}</p>
-                    </div>
-                    <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%]">{timeline.date}</div>
+                  <div className="group  relative min-h-[200px] flex items-center justify-center px-10">
+                      <div className="group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['1'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
+                        <div className="text-primaryPink text-lg font-semibold"> Hackathon Announcement</div>
+                        <p className="text-sm flex items-center">The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register</p>
+                      </div>
+                      <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%] group-[.inverted-tree]:text-right">November 18th 2023</div>
                   </div>
-                ))
-              }
+                  <div className="group inverted-tree relative min-h-[200px] flex items-center justify-center px-10">
+                      <div className="group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['2'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
+                        <div className="text-primaryPink text-lg font-semibold"> Teams Registration begins</div>
+                        <p className="text-sm flex items-center">Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023 by proceeding to register</p>
+                      </div>
+                      <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%] group-[.inverted-tree]:text-right">November 18th 2023</div>
+                  </div>
+                  <div className="group  relative min-h-[200px] flex items-center justify-center px-10">
+                      <div className="group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['3'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
+                        <div className="text-primaryPink text-lg font-semibold"> Teams Registration ends</div>
+                        <p className="text-sm flex items-center">Interested Participants are no longer Allowed to register</p>
+                      </div>
+                      <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%] group-[.inverted-tree]:text-right">November 18th 2023</div>
+                  </div>
+                  <div className="group inverted-tree relative min-h-[200px] flex items-center justify-center px-10">
+                      <div className="group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['4'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
+                        <div className="text-primaryPink text-lg font-semibold">Interested Participants are no longer Allowed to register</div>
+                        <p className="text-sm flex items-center">All teams whom idea has been accepted into getlinked tech hackathon 1.0 2023 are formally announced</p>
+                      </div>
+                      <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%] group-[.inverted-tree]:text-right">November 18th 2023</div>
+                  </div>
+                  <div className="group  relative min-h-[200px] flex items-center justify-center px-10">
+                      <div className="group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['5'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
+                        <div className="text-primaryPink text-lg font-semibold">Getlinked Hackathon 1.0 Offically Begins</div>
+                        <p className="text-sm flex items-center">Accepted teams can now proceed to build their ground breaking skill driven solutions</p>
+                      </div>
+                      <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%] group-[.inverted-tree]:text-right">November 18th 2023</div>
+                  </div>
+                  <div className="group inverted-tree relative min-h-[200px] flex items-center justify-center px-10">
+                      <div className="group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['6'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter before:content-[''] before:absolute before:bg-[#150E28] before:flex before:justify-center before:items-center before:top-[60%] before:left-[-20px] before:w-[40px] before:h-[80px] before:p-3 before:shadow-treeCounter">
+                        <div className="text-primaryPink text-lg font-semibold">Demo Day</div>
+                        <p className="text-sm flex items-center">Teams get the opportunity to pitch their projects to judges.The winner of the hackathon will also be announced on this day</p>
+                      </div>
+                      <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%] group-[.inverted-tree]:text-right">November 18th 2023</div>
+                  </div>
             </div>
           </div>
         </div>
@@ -270,7 +301,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="relative py-5 mb-5">
+      <section className="relative py-5 mb-5 overflow-hidden">
         <div className="container mx-auto px-16">
           <img className="absolute  top-[25%] left-[25%] w-5 h-5" src={grayStar} alt="" />
           <img className="absolute bottom-[-35%] left-[-35%] w-[80%] -z-20 rotate-[270deg]" src={purpleFlareImg} alt="" />
@@ -304,32 +335,3 @@ const Home = () => {
 }
 
 export default Home
-
-              // <div className="group relative min-h-[200px] flex items-center justify-center px-10">
-              //   <div className="relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['1'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
-              //     <div className="text-primaryPink text-lg font-semibold"> Hackathon Announcement </div>
-              //     <p className="text-sm flex items-center">The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register</p>
-              //   </div>
-              //   <div className="text-primaryPink text-lg font-semibold w-[50%] p-8">November 18, 2023</div>
-              // </div>
-              // <div className="group inverted-tree relative min-h-[200px] flex items-center justify-center px-10">
-              //   <div className="group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['1'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
-              //     <div className="text-primaryPink text-lg font-semibold"> Teams Registration begins</div>
-              //     <p className="text-sm flex items-center">Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023 by proceeding to register</p>
-              //   </div>
-              //   <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%]">November 18, 2023</div>
-              // </div>
-              // <div className="group relative min-h-[200px] flex items-center justify-center px-10">
-              //   <div className="relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['1'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
-              //     <div className="text-primaryPink text-lg font-semibold"> Hackathon Announcement </div>
-              //     <p className="text-sm flex items-center">The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register</p>
-              //   </div>
-              //   <div className="text-primaryPink text-lg font-semibold w-[50%] p-8">November 18, 2023</div>
-              // </div>
-              // <div className="group relative min-h-[200px] flex items-center justify-center px-10">
-              //   <div className="relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['1'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter">
-              //     <div className="text-primaryPink text-lg font-semibold"> Hackathon Announcement </div>
-              //     <p className="text-sm flex items-center">The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register</p>
-              //   </div>
-              //   <div className="text-primaryPink text-lg font-semibold w-[50%] p-8">November 18, 2023</div>
-              // </div>
