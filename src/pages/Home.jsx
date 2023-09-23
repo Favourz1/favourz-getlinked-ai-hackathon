@@ -24,6 +24,7 @@ import winwiseLogo from "../assets/images/winwise-logo.png"
 import wisperLogo from "../assets/images/wisper-logo.png"
 import payboxLogo from "../assets/images/Paybox.png"
 import visualplusLogo from "../assets/images/vizual-plus.png"
+import privacyImg from "../assets/images/privacy.png"
 import { timelineData } from "../data/timelineData"
 
 const Home = () => {
@@ -197,12 +198,12 @@ const Home = () => {
               {
                 timelineData.map((timeline, index)=>(
                   <div className={`group ${timeline.isInverted ? 'inverted-tree': ''} relative min-h-[200px] flex items-center justify-center px-10`} key={index}>
-                <div className={`group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['${timeline.id}'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter`}>
-                  <div className="text-primaryPink text-lg font-semibold"> {timeline.header}</div>
-                  <p className="text-sm flex items-center">{timeline.subText}</p>
-                </div>
-                <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%]">{timeline.date}</div>
-              </div>
+                    <div className={`group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['${timeline.id}'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter`}>
+                      <div className="text-primaryPink text-lg font-semibold"> {timeline.header}</div>
+                      <p className="text-sm flex items-center">{timeline.subText}</p>
+                    </div>
+                    <div className="text-primaryPink text-lg font-semibold w-[50%] p-8 group-[.inverted-tree]:w-[49.6%]">{timeline.date}</div>
+                  </div>
                 ))
               }
             </div>
@@ -265,6 +266,35 @@ const Home = () => {
               <div className="relative  max-w-[250px] p-6 flex justify-center items-center before:content-[''] before:w-full before:absolute before:top-[-22px] before:left-0 before:h-[1px] before:bg-primaryPink"> <img  src={wisperLogo} alt="" /></div>
               <div className="relative max-w-[250px] p-6 flex justify-center items-center border-x border-x-primaryPink before:content-[''] before:w-[80%] before:absolute before:top-[-22px] before:left-[10%] before:h-[1px] before:bg-primaryPink"> <img src={payboxLogo} alt="" /></div>
               <div className="relative max-w-[250px] p-6 flex justify-center items-center  before:content-[''] before:w-full before:absolute before:top-[-22px] before:left-0 before:h-[1px] before:bg-primaryPink"> <img  src={visualplusLogo} alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="relative py-5 mb-5">
+        <div className="container mx-auto px-16">
+          <img className="absolute  top-[25%] left-[25%] w-5 h-5" src={grayStar} alt="" />
+          <img className="absolute bottom-[-35%] left-[-35%] w-[80%] -z-20 rotate-[270deg]" src={purpleFlareImg} alt="" />
+          <img className="absolute bottom-[-35%] left-[-35%]" src={gradientStar} alt="" />
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="relative flex flex-col justify-center w-full md:w-[50%] pt-10 pb-5 text-left">
+              <div className="text-4xl font-semibold font-clashDisplay ">Privacy Policy and</div>
+              <div className="text-primaryPink text-4xl  font-semibold font-clashDisplay leading-[2] mb-4">Terms</div>
+              <p className="text-sm text-[#ffffffbf] mb-8">Last updated on September 12, 2023</p>
+              <p className="text-sm leading-7 mb-10">Below are our privacy & policy, which outline a lot of goodies. it’s our aim to always take of our participant</p>
+              <div className="p-12 border border-primaryPink flex flex-col items-center rounded-[5px] bg-[#d9d9d908] space-y-4">
+                <div className="text-sm leading-[2]">
+                  At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you consent to the practices described in this policy.
+                </div>
+                <div className="text-primaryPink font-semibold self-start">Licensing Policy</div>
+                <div className="font-semibold text-left self-start"> Here are terms of our Standard License:</div>
+                <ul className="ml-9 relative leading-9 space-y-6">
+                  <li className="relative before:bg-checkMark before:w-10 before:h-10 before:bg-no-repeat before:top-[10px] before:left-[-25px] before:absolute">The Standard License grants you a non-exclusive right to navigate and register for our event</li>
+                  <li className="relative before:bg-checkMark before:w-10 before:h-10 before:bg-no-repeat before:top-[10px] before:left-[-25px] before:absolute">You are licensed to use the item available at any free source sites, for your project development</li>
+                </ul>
+              </div>
+            </div>
+            <div className="relative flex flex-col justify-center items-center w-full md:w-[50%] pt-10 pb-5">
+              <img className="w-[90%]" src={privacyImg} alt="The Big Idea" />
             </div>
           </div>
         </div>

@@ -73,6 +73,6 @@ body {
   overflow-y: auto;
 }
 
-.group.inverted-tree{
+.group.inverted-tree {
   flex-direction: row-reverse;
 }

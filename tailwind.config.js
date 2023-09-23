@@ -18,6 +18,7 @@ export default {
        backgroundImage: {
         'btnBgGrad': ["linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)"],
         'heroLineCurve': "url('src/assets/icons/line-curve.svg')",
+        'checkMark': "url('src/assets/icons/check-mark.png')",
       },
        backgroundSize: {
          '30%': '30%',
