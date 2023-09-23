@@ -13,7 +13,7 @@ const Layout = ({children, showFooter= true}) => {
         <header className="py-2 md:py-5  border-b border-b-[#ffffff2e] text-white translate-y-[-100%] animate-[slideDown_0.5s_0.3s_ease_forwards]">
         <nav className="container mx-auto flex justify-between items-center px-16">
           <div className="flex items-center">
-                <Link to="#">
+                <Link to="/">
                 <img className='w-28 h-12' src={logo} alt="GetLinked Ai Logo" />
                 </Link>
           </div>
