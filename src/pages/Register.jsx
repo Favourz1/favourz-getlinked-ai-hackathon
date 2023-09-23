@@ -72,7 +72,7 @@ const Register = () => {
           <img className="absolute top-[-15px] left-[4%] opacity-80 w-[50%] h-[80%] -z-20" src={purpleFlareImg} alt="" />
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="relative flex flex-col justify-center w-full md:w-[40%] font-medium pt-10 pb-5 space-y-4">
-              <img src={manWithDesk} alt="" />
+              <img src={manWithDesk} alt="" className="animate-fadeInLeft"/>
             </div>
             <div className="relative flex flex-col justify-center w-full md:w-[60%] pt-10 pb-5 text-left">
               <div className="p-8 rounded-[12px] bg-[#ffffff08] shadow-contactForm">

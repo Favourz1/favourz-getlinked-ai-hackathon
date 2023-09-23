@@ -13,11 +13,11 @@ function App() {
     <div>
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/timeline" element={<Timeline />} />
-        <Route path="/overview" element={<Overview />} />
-        <Route path="/faq" element={<Faq />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/register" element={<Register />} />
+        {/* <Route path="/timeline" element={<Timeline />} />
+        <Route path="/overview" element={<Overview />} />
+        <Route path="/faq" element={<Faq />} /> */}
         <Route path="/*" element={<div>Not Found</div>} />
       </Routes>
     </div>

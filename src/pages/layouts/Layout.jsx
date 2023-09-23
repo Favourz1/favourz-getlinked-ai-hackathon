@@ -19,12 +19,14 @@ const Layout = ({children, showFooter= true}) => {
           </div>
           <div className="flex justify-between items-center">
             <ul className="hidden md:flex items-center space-x-4 mr-40">
-                <li className="pt-2 font-medium"><a href="#">Timeline</a></li>
-                <li className="pt-2 font-medium"><a href="#">Overview</a></li>
-                <li className="pt-2 font-medium"><a href="#">FAQs</a></li>
-                <li className="pt-2 font-medium "><a className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent" href="#">Contact</a></li>
+                <li className="nav-link active pt-2 font-medium"><a href="#">Timeline</a></li>
+                <li className="nav-link active pt-2 font-medium"><a href="#">Overview</a></li>
+                <li className="nav-link active pt-2 font-medium"><a href="#">FAQs</a></li>
+                <li className="nav-link active pt-2 font-medium "><Link to="/contact">Contact</Link></li>
             </ul>
+            <Link to="/register">
             <button className='px-5 py-2 bg-btnBgGrad rounded-[4px] hover:scale-95 hover:opacity-80'>Register</button> 
+            </Link>
           </div>
         </nav>
       </header>
