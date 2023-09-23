@@ -18,6 +18,12 @@ import champCup from "../assets/images/cup-target.png"
 import goldMedal from "../assets/images/gold-medal.png"
 import bronzeMedal from "../assets/images/bronze-medal.png"
 import silverMedal from "../assets/images/silver-medal.png"
+import libertyLogo from "../assets/images/liberty-logo.png"
+import libertyPayLogo from "../assets/images/libertyPay-logo.png"
+import winwiseLogo from "../assets/images/winwise-logo.png"
+import wisperLogo from "../assets/images/wisper-logo.png"
+import payboxLogo from "../assets/images/Paybox.png"
+import visualplusLogo from "../assets/images/vizual-plus.png"
 import { timelineData } from "../data/timelineData"
 
 const Home = () => {
@@ -147,9 +153,9 @@ const Home = () => {
                     </div>
                   </button>
                   <button className="w-full border-b-2 border-primaryPink pb-4 text-left group mt-6 focus:outline-none">
-                    <div className="flex justify-between text-md font-medium">What happens if I don't have an idea for a project? <span className="text-primaryPink text-xl pl-6">+</span></div>
+                    <div className="flex justify-between text-md font-medium">What happens if I don&apos;t have an idea for a project? <span className="text-primaryPink text-xl pl-6">+</span></div>
                     <div className="mt-3 hidden text-[#808080] text-sm group-focus:flex">
-                      <p>We have an idea bank of projects to be worked on. So don't worry we got you covered</p>
+                      <p>We have an idea bank of projects to be worked on. So don&apos;t worry we got you covered</p>
                     </div>
                   </button>
                   <button className="w-full border-b-2 border-primaryPink pb-4 text-left group mt-6 focus:outline-none">
@@ -191,7 +197,7 @@ const Home = () => {
               {
                 timelineData.map((timeline, index)=>(
                   <div className={`group ${timeline.isInverted ? 'inverted-tree': ''} relative min-h-[200px] flex items-center justify-center px-10`} key={index}>
-                <div className={`group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['1'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter`} style={{content: timeline.id}}>
+                <div className={`group-[.inverted-tree]:border-r-0 group-[.inverted-tree]:border-l-2 group-[.inverted-tree]:after:left-[-15px] relative w-[50%] min-h-[200px] flex flex-col justify-center p-8 border-r-2 border-primaryPink  after:content-['${timeline.id}'] after:absolute after:bg-primaryPink after:flex after:justify-center after:items-center after:top-[50%] after:right-[-15px] after:w-[30px] after:h-[30px] after:rounded-[50%] after:p-3 after:shadow-treeCounter`}>
                   <div className="text-primaryPink text-lg font-semibold"> {timeline.header}</div>
                   <p className="text-sm flex items-center">{timeline.subText}</p>
                 </div>
@@ -205,20 +211,20 @@ const Home = () => {
       </section>
       <section className="relative py-5 mb-5">
         <div className="container mx-auto px-16">
-                    <img className="absolute bottom-[-50%] right-[-35%] w-[80%] -z-20 opacity-70 rotate-[117deg]" src={purpleFlareImg} alt="" />
+         <img className="absolute bottom-[-50%] right-[-35%] w-[80%] -z-20 opacity-70 rotate-[117deg]" src={purpleFlareImg} alt="" />
           <img className="absolute top-[-15px] left-[4%] opacity-80 w-[50%] h-[80%] -z-20" src={purpleFlareImg} alt="" />
-
+              <div className="ml-[50%] mb-10">
+                <div className="text-4xl font-semibold font-clashDisplay">Prizes and</div>
+                <div className="text-primaryPink text-4xl  font-semibold font-clashDisplay leading-[2]">Rewards</div>
+                <p className="text-sm leading-7 max-w-[60%]">Highlight of the prizes or rewards for winners and for participants</p>
+              </div>
           <div className="flex flex-col md:flex-row gap-10">
             <div className="relative flex flex-col justify-center items-center w-full md:w-[40%] pt-10 pb-5">
               <img className="w-[90%]" src={champCup} alt="Champions Cup" />
               <img className="absolute top-[10%] left-[23%] h-5 w-5" src={purpleStar} alt="" />
             </div>
             <div className="relative flex flex-col justify-start w-full md:w-[60%] pt-10 pb-5 text-left">
-              <div className="pl-[20%] mb-10">
-                <div className="text-4xl font-semibold font-clashDisplay ">Prizes and</div>
-                <div className="text-primaryPink text-4xl  font-semibold font-clashDisplay leading-[2]">Rewards</div>
-                <p className="text-sm leading-7 max-w-[60%]">Highlight of the prizes or rewards for winners and for participants</p>
-              </div>
+              
               <div className="relative flex justify-center items-center mt-36 space-x-6">
               <img className="absolute top-[-80%] left-[50px] h-5 w-5" src={whiteStar} alt="" />
               <img className="absolute top-[-40%] right-[8px] h-5 w-5" src={whiteStar} alt="" />
@@ -239,6 +245,26 @@ const Home = () => {
                     <p className="text-xl text-primaryPink font-semibold">N150,000</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="relative py-5 mb-5">
+        <div className="container mx-auto px-16">
+         <img className="absolute bottom-[-50%] right-[-35%] w-[80%] -z-20 opacity-70 rotate-[117deg]" src={purpleFlareImg} alt="" />
+          <img className="absolute top-[-15px] left-[4%] opacity-80 w-[50%] h-[80%] -z-20" src={purpleFlareImg} alt="" />
+              <div className="flex flex-col justify-center items-center text-center mb-6">
+                <div className="text-4xl font-semibold font-clashDisplay">Partners and Sponsors</div>
+                <p className="text-sm leading-7 max-w-[60%] text-center">Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</p>
+              </div>
+          <div className="flex justify-center items-center rounded-[5px] border border-primaryPink bg-[#ffffff03] p-10">
+            <div className="grid grid-cols-3 gap-10">
+              <div className="relative max-w-[250px] p-6 flex justify-center items-center"> <img  src={libertyLogo} alt="" /></div>
+              <div className="relative max-w-[250px] p-6 flex justify-center items-center border-x  border-x-primaryPink"> <img  src={libertyPayLogo} alt="" /></div>
+              <div className="relative max-w-[250px] p-6 flex justify-center items-center"> <img  src={winwiseLogo} alt="" /></div>
+              <div className="relative  max-w-[250px] p-6 flex justify-center items-center before:content-[''] before:w-full before:absolute before:top-[-22px] before:left-0 before:h-[1px] before:bg-primaryPink"> <img  src={wisperLogo} alt="" /></div>
+              <div className="relative max-w-[250px] p-6 flex justify-center items-center border-x border-x-primaryPink before:content-[''] before:w-[80%] before:absolute before:top-[-22px] before:left-[10%] before:h-[1px] before:bg-primaryPink"> <img src={payboxLogo} alt="" /></div>
+              <div className="relative max-w-[250px] p-6 flex justify-center items-center  before:content-[''] before:w-full before:absolute before:top-[-22px] before:left-0 before:h-[1px] before:bg-primaryPink"> <img  src={visualplusLogo} alt="" /></div>
             </div>
           </div>
         </div>
